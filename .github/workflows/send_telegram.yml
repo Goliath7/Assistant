@@ -10,6 +10,8 @@ on:
   push:
     paths:
       - 'message.txt'
+      - 'send.py'
+      - '.github/workflows/send_telegram.yml'
 
 jobs:
   send:
@@ -25,9 +27,10 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install pyTelegramBotAPI
 
       - name: Send Telegram message
         env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           MESSAGE: ${{ github.event.inputs.message }}
         run: python send.py
