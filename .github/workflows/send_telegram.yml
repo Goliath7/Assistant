@@ -30,6 +30,5 @@ jobs:
       - name: Send Telegram message
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          CHAT_ID: ${{ secrets.CHAT_ID }}
           MESSAGE: ${{ github.event.inputs.message }}
         run: python send.py
