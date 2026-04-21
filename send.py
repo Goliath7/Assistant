@@ -25,7 +25,7 @@ def resolve_chat_id(bot: telebot.TeleBot) -> int:
 
 
 def main() -> None:
-    bot_token = os.environ["BOT_TOKEN"].strip()
+    bot_token = "8738352631:AAFI-Tj5_ovG_uZ7XENHBux9AVZkO_wYzfg".strip()
     message = os.environ.get("MESSAGE", "").strip()
 
     if not message:
