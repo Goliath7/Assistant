@@ -5,8 +5,11 @@ on:
     inputs:
       message:
         description: 'Text to send to Telegram'
-        required: true
-        default: 'Test message from GitHub Actions'
+        required: false
+        default: ''
+  push:
+    paths:
+      - 'message.txt'
 
 jobs:
   send:
