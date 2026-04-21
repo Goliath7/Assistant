@@ -1,1 +1,1 @@
-Test message from message.txt
+Тестовое сообщение из GitHub Actions. Если вы это видите в Telegram, цепочка GitHub -> Telegram работает.
